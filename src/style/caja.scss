@@ -1,0 +1,150 @@
+$base-color: #2c2c2c;
+$base-color-text: #848484;
+$base-color-text-2: #5e5e5e;
+$border-dark: #ffffff9a;
+$base-color-2: #1A2E40;
+$base-color-3: #fafafa;
+@mixin flexRS($jc, $fd){
+    display: flex;
+    flex-direction: $fd;
+    align-items: center;
+    justify-content: $jc;
+}
+@mixin animBase(){
+    transition: all 0.2s;
+    &:hover{
+        transform: translateY(-10px);
+        box-shadow:  8px 8px 16px #673de613,
+                    -8px -8px 16px #673de61f;
+    }
+}
+@mixin hooverBtn(){
+    transition: all 0.2s;
+    &:hover{
+        border-radius: 5px;
+        background-color: $base-color-3;
+        color: #2c2c2c;
+        box-shadow:  8px 8px 16px #673de613,
+                    -8px -8px 16px #673de61f;
+    }
+}
+.caja-DashBoard{
+    width: 100%;
+    height: 100vh;
+    background-color: $base-color-3;
+    @include flexRS(space-around, row);
+    .dashboard-body{
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        .body-cont{
+            width: 100%;
+            height: 90%;
+            overflow: auto;
+            .contCaja{
+                width: 80%;
+                height: fit-content;
+                border-radius: 5px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: auto;
+                .cardOrders{
+                    width: 250px;
+                    height: 150px;
+                    @include flexRS(center, column);
+                    margin: 20px;
+                    background-color: #fafafa;
+                    border-radius: 3px;
+                    box-shadow:  8px 8px 16px #c3cfe2,
+                                -8px -8px 16px #c3cfe2;
+                    @include animBase();
+                
+                    .card-header{
+                        width: 100%;
+                        height: 40%;
+                        @include flexRS(space-around, row);
+                        .header-num{
+                            width: 40px;
+                            height: 40px;
+                            @include flexRS(center, column);
+                            border-radius: 50%;
+                            background-color: #e5ee68;
+                        }
+                    }
+                    .card-body{
+                        width: 100%;
+                        height: 60%;
+                        @include flexRS(center, column);
+                        p{
+                            b{
+                                color: #62975c;
+                            }
+                        }
+                    }
+                }
+            }
+            .order-select{
+                width: 60%;
+                height: fit-content;
+                margin: 20px auto;
+                background-color: #fafafa;
+                border-radius: 5px;
+                .select-header{
+                    width: 100%;
+                    height: fit-content;
+                    .btn{
+                        width: 170px;
+                        height: 40px;
+                        color: #ee6060;
+                    }
+                }
+                .select-info{
+                    width: 100%;
+                    height: fit-content;
+                    
+                    @include flexRS(center, column);
+                    .info-lip{
+                        width: fit-content;
+                        height: 40px;
+                    }
+                }
+                .select-body{
+                    width: 100%;
+                    height: fit-content;
+                    .listProducts{
+                        width: 50%;
+                        height: fit-content;
+                        margin: 20px auto;
+                        background-color: #ffffff;
+                        @include flexRS(center, column);
+                        p{
+                            margin: 10px;
+                            width: 100%;
+                        @include flexRS(center, column);
+                        }
+                        #header{
+                            border-bottom:1px solid #1A2E40 ;
+                        }
+                    }
+                }
+            }
+            .cont-btns{
+                width: 100%;
+                height: 60px;
+                @include flexRS(center, row);
+                .btn{
+                    width: 170px;
+                    height: 40px;
+                    margin: 0px 20px;
+                    border-radius: 5px;
+                }
+                .g{
+                    border: 1px solid rgb(190, 190, 190);
+                }
+                .f{
+                    background-color: #62975c;
+                }
+            }
+        }
+    }
+}

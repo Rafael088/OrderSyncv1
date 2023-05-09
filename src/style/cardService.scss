@@ -1,0 +1,97 @@
+$base-color: #2c2c2c;
+$base-color-text: #848484;
+$base-color-text-2: #5e5e5e;
+$border-dark: #ffffff9a;
+$base-color-2: #1A2E40;
+$base-color-3: #fafafa;
+@mixin flexRS($jc, $fd){
+    display: flex;
+    flex-direction: $fd;
+    align-items: center;
+    justify-content: $jc;
+}
+@mixin animBase(){
+    transition: all 0.2s;
+    &:hover{
+        transform: translateY(-10px);
+        box-shadow:  8px 8px 16px #673de613,
+                    -8px -8px 16px #673de61f;
+    }
+}
+@mixin hooverBtn(){
+    transition: all 0.2s;
+    &:hover{
+        border-radius: 5px;
+        background-color: $base-color-3;
+        color: #2c2c2c;
+        box-shadow:  8px 8px 16px #673de613,
+                    -8px -8px 16px #673de61f;
+    }
+}
+.service-cardService{
+    width: 25%;
+    height: 90%;
+    margin: 0px 20px;
+    border: 0.5px solid #c7c7c7;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow:  8px 8px 16px #fafafa,
+                -8px -8px 16px #fafafa;
+    @include animBase();
+    .cardService-header{
+        width: 100%;
+        height: 20%;
+        @include flexRS(center, column);
+        p{
+            font-size: 13px;
+            color: $base-color-text;
+        }
+    }
+    .cardService-body{
+        width: 100%;
+        height: 22%;
+        @include flexRS(center, column);
+        #col{
+            text-decoration: line-through;
+            color: #c7c7c7;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 15px;
+            b{
+                font-size: 20px;
+            }
+        }
+        .body-btn{
+            width: 230px;
+            height: 40px;
+            @include flexRS(center, column);
+            font-size: 13px;
+            margin-top: 10px;
+            border-radius: 25px;
+            color: #fff;
+            background-color: #673de6;
+            margin-bottom: 10px;
+            @include hooverBtn();
+        }
+    }
+    .cardService-footer{
+        width: 100%;
+        height: 58%;
+        @include flexRS(flex-start, column);
+        .footer-content{
+            width: 100%;
+            @include flexRS(center, row);
+            .icon{
+                color: #63f047;
+            }
+            p{
+                text-align: start;
+                width: 80%;
+                margin: 10px 5px;
+                font-size: 13px;
+            }
+        }
+        
+    }
+}

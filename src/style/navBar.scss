@@ -1,0 +1,73 @@
+$base-color: #2c2c2c;
+$border-dark: #ffffffc9;
+$base-color-2: #1A2E40;
+@mixin flexRS($jc, $fd){
+    display: flex;
+    flex-direction: $fd;
+    align-items: center;
+    justify-content: $jc;
+}
+.contNavBar{
+    width: 101%;
+    height: 70px;
+    background-color: $border-dark;
+    color: $base-color;
+    position: fixed;
+    @include flexRS(flex-start, row);
+    backdrop-filter: blur(100px);
+    .contNavBar-header{
+        width: 220px;
+        height: 100%;
+        @include flexRS(center, row);
+        overflow: hidden;
+        b{
+            position: relative;
+            left: -30%;
+        }
+        .img{
+            width: fit-content;
+            height: 190px;
+            top: 12%;
+            position: relative;
+        }
+    }
+    .contNavBar-body{
+        width: 50%;
+        margin-left: 15%;
+        height: 100%;
+        @include flexRS(flex-start, row);
+        .btn{
+            width: 100px;
+            height: 40px;
+            margin: 10px;
+            @include flexRS(center, column);
+            color: $base-color-2;
+            text-decoration: none;
+            transition: all 0.2s;
+            &:hover{
+                color: #673de6;
+            }
+        }
+    }
+    .contNavBar-footer{
+        width: 15%;
+        height: 100%;
+        @include flexRS(center, column);
+        .footer-contBtns{
+            width: 50%;
+            height: 100%;
+            @include flexRS(center, row);
+            a{
+                text-decoration: none;
+                color: $base-color;
+                .icon{
+                    width: 20px;
+                    height: 20px;
+                    margin: 10px;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+}

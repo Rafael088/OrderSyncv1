@@ -1,0 +1,51 @@
+$base-color: #2c2c2c;
+$base-color-text: #848484;
+$base-color-text-2: #5e5e5e;
+$border-dark: #ffffff9a;
+$base-color-2: #1A2E40;
+$base-color-3: #fafafa;
+@mixin flexRS($jc, $fd){
+    display: flex;
+    flex-direction: $fd;
+    align-items: center;
+    justify-content: $jc;
+}
+@mixin animBase(){
+    transition: all 0.2s;
+    &:hover{
+        transform: translateY(-10px);
+        box-shadow:  8px 8px 16px #673de613,
+                    -8px -8px 16px #673de61f;
+    }
+}
+@mixin hooverBtn(){
+    transition: all 0.2s;
+    &:hover{
+        border-radius: 5px;
+        background-color: $base-color-3;
+        color: #2c2c2c;
+        box-shadow:  8px 8px 16px #673de613,
+                    -8px -8px 16px #673de61f;
+    }
+}
+.services{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: $base-color-3;
+    .services-body{
+        width: 100%;
+        margin-top: 50px;
+        height: 800px;
+        @include flexRS(center, row);
+
+    }
+    .services-info{
+        width: 90%;
+        margin: 30px auto;
+        height: 500px;
+        border-radius: 5px;
+        background-color: #fff;
+        @include flexRS(center, column);
+    }
+}
