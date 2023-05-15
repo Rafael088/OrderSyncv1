@@ -13,7 +13,7 @@ function Orders() {
     
     async function conectDb() {
         setRefreshing(true);
-        let url = `http://localhost:5000/order/${auth.idRest}/get`
+        let url = `https://backend-apc.vercel.app/order/${auth.idRest}/get`
         await fetch(url)
         .then(res => res.json())
         .then(data => {

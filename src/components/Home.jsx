@@ -42,9 +42,9 @@ function Home() {
                 <CardInfo/>
             </div>
             <div className="body-service">
-                <CardService title="OrderSync Sencillo" name="Perfecto para empresas pequeñas" price="10.000" priceOri="20.000" array={oneService}/>
-                <CardService title="OrderSync Premiun" name="Ideal para personalizar tu software" price={"20.000"} priceOri="40.000"  array={twoService}/>
-                <CardService title="OrderSync Empresarial" name="El paquete completo para la transformacion" price={"50.000"} priceOri="100.000"  array={threeService}/>
+                <CardService title="OrderSync Sencillo" name="Perfecto para empresas pequeñas" price="30.000" priceOri="50.000" array={oneService}/>
+                <CardService title="OrderSync Premiun" name="Ideal para personalizar tu software" price={"50.000"} priceOri="70.000"  array={twoService}/>
+                <CardService title="OrderSync Empresarial" name="El paquete completo para la transformacion" price={"100.000"} priceOri="150.000"  array={threeService}/>
             </div>
             <div className="body-about">
                 <CardAbout/>

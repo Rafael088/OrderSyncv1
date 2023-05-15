@@ -29,7 +29,7 @@ function CardCaja({data}) {
                     <p>{countList} Platos</p>
                 </div>
                 <div className="header-num">
-                    <p>{data.numeroMesa}</p>
+                    <p>{data.mesa}</p>
                 </div>
             </div>
             <div className="card-body">

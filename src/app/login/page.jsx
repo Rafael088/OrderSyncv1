@@ -11,7 +11,7 @@ export default function Login() {
     const {register, handleSubmit} = useForm();
     const [fails, setFails] = useState("");
     async function log(db) {
-        let url = 'https://backend-c4yfwl2x6-rafael088.vercel.app/users/auth'
+        let url = 'https://backend-apc.vercel.app/users/auth'
         await fetch(url, {
             method: 'POST',
             headers: {

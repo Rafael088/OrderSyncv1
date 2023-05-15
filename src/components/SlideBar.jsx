@@ -26,10 +26,6 @@ function SlideBar() {
                     <AiOutlineBook className="icon"/>
                     <p>Estadisticas</p>
                     </Link>
-                <Link href="/ordersyncPro/usuarios" className="btn">
-                    <AiOutlineSolution className="icon"/>
-                    <p>Usuarios</p>
-                    </Link>
             </div>
             <div className="slidebar-footer">
                 

@@ -24,7 +24,7 @@ function Caja() {
     async function close() {
         let db = {}
         db.status = "Completado"
-        let url = `http://localhost:5000/order/${orderSelect._id}/state`
+        let url = `https://backend-apc.vercel.app/order/${orderSelect._id}/state`
         await fetch(url, {
             method: 'PUT',
             headers: {
@@ -46,7 +46,7 @@ function Caja() {
             {modal?<ModalFactura changeModal={changeModal}/>:<></>}
             <SlideBar/>
             <div className="dashboard-body">
-                <Header title={orderSelect?`Mesa ${orderSelect.numeroMesa}`:"Caja"} />
+                <Header title={orderSelect?`Mesa ${orderSelect.mesa}`:"Caja"} />
                 <div className="body-cont">
                     {
                         orderSelect?
