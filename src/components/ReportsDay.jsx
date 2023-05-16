@@ -7,7 +7,7 @@ function ReportDay() {
     const [data, setData] = useState(false);
     useEffect(() => {
       getData()
-    }, [])
+    })
     async function getData() {
         let url = `http://localhost:5000/reports/getReportsDays/${auth.idRest}`
         await fetch(url)

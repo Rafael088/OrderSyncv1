@@ -21,7 +21,7 @@ function OrderSyncPro() {
             
         }
         dispatch(deleteOrder())
-    }, [])
+    })
     //esta funcion actualiza el estado de la orden a En caja
     async function close() {
         let db = {}

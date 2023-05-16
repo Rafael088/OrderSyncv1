@@ -51,7 +51,7 @@ function ReportsGen() {
       };
       useEffect(() => {
         getData()
-      }, [])
+      })
       
       async function getData() {
         let url = `http://localhost:5000/reports/getGeneralReport/${auth.idRest}`

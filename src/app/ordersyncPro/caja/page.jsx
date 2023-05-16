@@ -17,7 +17,7 @@ function Caja() {
     const [modal, setModal] = useState(false);
     useEffect(() => {
       dispatch(deleteOrder())
-    }, [])
+    })
     function changeModal() {
         modal ? setModal(!modal) : setModal(!modal)
     }

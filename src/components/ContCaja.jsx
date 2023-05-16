@@ -8,7 +8,7 @@ function ContCaja() {
     const {auth} = useSelector((state) => state.auth)
     useEffect(() => {
       conectDb()
-    }, [])
+    })
     async function conectDb() {
         setRefreshing(true);
         let url = `https://backend-apc.vercel.app/order/${auth.idRest}/all`
@@ -28,8 +28,8 @@ function ContCaja() {
             {
                 data?
                 <>
-                    {data.map(element => (
-                        <CardCaja data={element} />
+                    {data.map((element, index) => (
+                        <CardCaja data={element} key={index}/>
                     ))}
                 </>:<></>
             }

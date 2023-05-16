@@ -52,7 +52,7 @@ function ReportMonth() {
       };
       useEffect(() => {
         getData()
-      }, [])
+      })
       
       async function getData() {
         let url = `http://localhost:5000/reports/getReportsMonth/${auth.idRest}`

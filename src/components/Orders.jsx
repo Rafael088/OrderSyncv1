@@ -9,7 +9,7 @@ function Orders() {
     const {auth} = useSelector((state) => state.auth)
     useEffect(() => {
       conectDb()
-    }, [])
+    })
     
     async function conectDb() {
         setRefreshing(true);

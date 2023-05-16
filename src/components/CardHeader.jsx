@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 function CardHeader() {
     return ( 
         <div className="header-cardHeader">
             <div className="cardHeader-img">
-                <img src="/OrderSyncProIcon.png" alt="OrderSync"/>
+                <Image src="/OrderSyncProIcon.png" alt="OrderSync"/>
             </div>
             <div className="cardHeader-body">
                 <b>OrderSync Pro</b>

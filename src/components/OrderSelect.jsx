@@ -15,7 +15,7 @@ function OrderSelect() {
     useEffect(() => {
       getTime()
       getPrice()
-    }, [])
+    })
     
     function goBack() {
         dispatch(deleteOrder())

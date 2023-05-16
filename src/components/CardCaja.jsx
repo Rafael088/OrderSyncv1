@@ -10,7 +10,7 @@ function CardCaja({data}) {
     let countList = data.listProducts.length
     useEffect(() => {
         getPrice()
-      }, [])
+      })
     function getData() {
         dispatch(addOrder(data))
         //router.push('/ordersyncPro/order')

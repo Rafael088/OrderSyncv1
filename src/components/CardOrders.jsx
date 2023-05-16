@@ -13,7 +13,7 @@ function CardOrders({data}) {
     useEffect(() => {
       getTime()
 
-    }, [])
+    })
     
     function getData() {
         dispatch(addOrder(data))
