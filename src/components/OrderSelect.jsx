@@ -13,6 +13,7 @@ function OrderSelect() {
     const {orderSelect} = useSelector((state) => state.orderSelect)
     let countList = orderSelect.listProducts.length
     useEffect(() => {
+    
       getTime()
       getPrice()
     })

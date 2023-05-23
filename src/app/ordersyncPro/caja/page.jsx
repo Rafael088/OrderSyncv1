@@ -15,16 +15,15 @@ function Caja() {
     //const {auth} = useSelector((state) => state.auth)
     const {orderSelect} = useSelector((state) => state.orderSelect)
     const [modal, setModal] = useState(false);
-    useEffect(() => {
-      dispatch(deleteOrder())
-    })
+    
     function changeModal() {
         modal ? setModal(!modal) : setModal(!modal)
     }
     async function close() {
         let db = {}
         db.status = "Completado"
-        let url = `https://backend-apc.vercel.app/order/${orderSelect._id}/state`
+        const back = process.env.NEXT_PUBLIC_API_BACK
+        let url = `${back}order/${orderSelect._id}/state`
         await fetch(url, {
             method: 'PUT',
             headers: {

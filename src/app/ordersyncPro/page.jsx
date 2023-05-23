@@ -21,12 +21,13 @@ function OrderSyncPro() {
             
         }
         dispatch(deleteOrder())
-    })
+    }, [auth])
     //esta funcion actualiza el estado de la orden a En caja
     async function close() {
         let db = {}
         db.status = "En Caja"
-        let url = `https://backend-apc.vercel.app/order/${orderSelect._id}/state`
+        const back = process.env.NEXT_PUBLIC_API_BACK
+        let url = `${back}order/${orderSelect._id}/state`
         await fetch(url, {
             method: 'PUT',
             headers: {

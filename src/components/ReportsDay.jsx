@@ -9,7 +9,9 @@ function ReportDay() {
       getData()
     })
     async function getData() {
-        let url = `http://localhost:5000/reports/getReportsDays/${auth.idRest}`
+        
+        const back = process.env.NEXT_PUBLIC_API_BACK
+        let url = `${back}reports/getReportsDays/${auth.idRest}`
         await fetch(url)
         .then(res => res.json())
         .then(data => {

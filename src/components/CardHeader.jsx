@@ -4,7 +4,7 @@ function CardHeader() {
     return ( 
         <div className="header-cardHeader">
             <div className="cardHeader-img">
-                <Image src="/OrderSyncProIcon.png" alt="OrderSync"/>
+                <Image src="/OrderSyncProIcon.png" alt="OrderSync" width={200} height={200}/>
             </div>
             <div className="cardHeader-body">
                 <b>OrderSync Pro</b>

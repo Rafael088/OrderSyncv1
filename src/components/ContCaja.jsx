@@ -11,7 +11,9 @@ function ContCaja() {
     })
     async function conectDb() {
         setRefreshing(true);
-        let url = `https://backend-apc.vercel.app/order/${auth.idRest}/all`
+        
+        const back = process.env.NEXT_PUBLIC_API_BACK
+        let url = `${back}order/${auth.idRest}/all`
         await fetch(url)
         .then(res => res.json())
         .then(data => {

@@ -12,8 +12,10 @@ function Orders() {
     })
     
     async function conectDb() {
+        
+        const back = process.env.NEXT_PUBLIC_API_BACK
         setRefreshing(true);
-        let url = `https://backend-apc.vercel.app/order/${auth.idRest}/get`
+        let url = `${back}order/${auth.idRest}/get`
         await fetch(url)
         .then(res => res.json())
         .then(data => {
