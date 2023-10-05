@@ -5,8 +5,8 @@ import Providers from './providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'OrderSync',
-  description: 'Automatizacion de Procesos de gestion en restaurantes',
+  title: 'OSync',
+  description: 'Sincroniza tus sabores y eleva tu servicios',
 }
 
 export default function RootLayout({ children }) {
