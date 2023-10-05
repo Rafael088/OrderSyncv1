@@ -9,11 +9,12 @@ function Home() {
         "Ideal para restaurantes pequeños o con un número limitado de mesas.",
         "Gestión básica de pedidos y asignación de mesas.",
         "Acceso a menús diarios predefinidos y personalizables.",
-        "Soporte técnico básico y acceso a la base de conocimientos en línea."
+        "Soporte técnico básico y acceso a la base de conocimientos en línea.",
+        "Acceso a dashboard de registros mensuales, semanales y diarios",
     ]
     let twoService = [
         "Adecuado para restaurantes medianos y aquellos que buscan funcionalidades adicionales.",
-        "Todas las características de OrderSync Sencillo, además de:",
+        "Todas las características de Osync Sencillo, además de:",
         "Integración con sistemas de punto de venta (POS) y sistemas de inventario.",
         "Capacidades avanzadas de análisis de datos y generación de informes.",
         "Personalización de la interfaz de usuario y opciones de branding.",
@@ -21,7 +22,7 @@ function Home() {
     ]
     let threeService = [
         "Diseñado para cadenas de restaurantes, franquicias y establecimientos de gran tamaño.",
-        "Todas las características de OrderSync Premium, además de:",
+        "Todas las características de Osync Premium, además de:",
         "Gestión centralizada de múltiples ubicaciones y control de acceso basado en roles.",
         "Funcionalidades avanzadas de pronóstico y optimización del inventario.",
         "Implementación y soporte técnico dedicado, capacitación en persona y acceso a nuevas funciones en desarrollo."
@@ -32,19 +33,19 @@ function Home() {
                 <CardHeader/>
             </div>
             <div className="body-bene">
-                <CardBene text="Acelere la eficiencia de su restaurante">
+                <CardBene text="Acelere la eficiencia de su restaurante" position={1}> 
                 </CardBene>
-                <CardBene text="Reduzca costos y aumente las ganancias" />
-                <CardBene text="Datos valiosos al alcance de su mano" />
-                <CardBene text="Personal feliz, clientes satisfechos" />
+                <CardBene text="Reduzca costos y aumente las ganancias"  position={2}/>
+                <CardBene text="Datos valiosos al alcance de su mano" position={3}/>
+                <CardBene text="Personal feliz, clientes satisfechos" position={4}/>
             </div>
             <div className="body-info">
                 <CardInfo/>
             </div>
             <div className="body-service">
-                <CardService title="OrderSync Sencillo" name="Perfecto para empresas pequeñas" price="30.000" priceOri="50.000" array={oneService}/>
-                <CardService title="OrderSync Premiun" name="Ideal para personalizar tu software" price={"50.000"} priceOri="70.000"  array={twoService}/>
-                <CardService title="OrderSync Empresarial" name="El paquete completo para la transformacion" price={"100.000"} priceOri="150.000"  array={threeService}/>
+                <CardService title="Osync Sencillo" name="Perfecto para empresas pequeñas" price="Gatris" priceOri="Gatris" array={oneService}/>
+                <CardService title="Osync Premiun" name="Ideal para personalizar tu software" price={"59.900"} priceOri="79.900"  array={twoService}/>
+                <CardService title="Osync Empresarial" name="El paquete completo para la transformacion" price={"99.900"} priceOri="149.900"  array={threeService}/>
             </div>
             <div className="body-about">
                 <CardAbout/>

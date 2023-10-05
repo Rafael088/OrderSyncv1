@@ -10,7 +10,7 @@ function NabVar() {
         <div className="contNavBar">
             <div className="contNavBar-header">
                 <Image src="/OrderSync Proff.png" alt="OrderSync Pro" className="img" width={200} height={200} />
-                <b>OrderSync</b>
+                <b>Osync</b>
             </div>
             <div className="contNavBar-body">
                 <Link href="/" className="btn">Inicio</Link>
@@ -20,9 +20,9 @@ function NabVar() {
             </div>
             <div className="contNavBar-footer">
                 <div className="footer-contBtns">
-                    <Link href="/login">
+                    {/* <Link href="/login">
                         <BsFillPersonFill className="icon" />
-                    </Link>
+                    </Link> */}
                     <a href="http://www.facebook.com" target="_black">
                         <BsFacebook className="icon" />
                     </a>

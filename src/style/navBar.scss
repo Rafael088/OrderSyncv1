@@ -13,13 +13,14 @@ $base-color-2: #1A2E40;
     background-color: $border-dark;
     color: $base-color;
     position: fixed;
-    @include flexRS(flex-start, row);
+    @include flexRS(center, row);
     backdrop-filter: blur(100px);
     .contNavBar-header{
         width: 220px;
         height: 100%;
         @include flexRS(center, row);
         overflow: hidden;
+        margin-left: 10%;
         b{
             position: relative;
             left: -30%;
@@ -32,10 +33,10 @@ $base-color-2: #1A2E40;
         }
     }
     .contNavBar-body{
-        width: 50%;
+        width: 60%;
         margin-left: 15%;
         height: 100%;
-        @include flexRS(flex-start, row);
+        @include flexRS(flex-end, row);
         .btn{
             width: 100px;
             height: 40px;

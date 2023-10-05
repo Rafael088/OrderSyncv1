@@ -19,7 +19,7 @@ function Footer() {
                 <p>+57 3148186762</p>
                 <p>Colombia - Manizales, Caldas</p>
             </div>
-            <p>OrderSync es marca registrada con todos los derechos reservados 2023.</p>
+            <p>Osync es marca registrada con todos los derechos reservados 2023.</p>
         </div>
      );
 }

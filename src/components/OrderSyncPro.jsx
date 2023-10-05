@@ -5,26 +5,26 @@ function OrderSyncPro() {
                 <b>Última actualización: Versión 1.2.0 {`(28 de abril de 2023)`}</b>
             </h2>
             <p>
-                <i>Hola, usuario de OrderSync Pro,</i>
+                <i>Hola, usuario de Osync Pro,</i>
             </p>
 
-            <p>Nos complace anunciar que hemos lanzado una nueva versión de OrderSync Pro, la versión 1.2.0, el 28 de abril de 2023. A continuación, encontrarás un resumen de las mejoras y nuevas características incluidas en esta actualización:</p>
+            <p>Nos complace anunciar que hemos lanzado una nueva versión de Osync Pro, la versión 1.2.1, el 11 de agosto de 2023. A continuación, encontrarás un resumen de las mejoras y nuevas características incluidas en esta actualización:</p>
             <p>
-                <b>Mejoras en la interfaz de usuario: </b>
-                Hemos rediseñado la pantalla de pedidos para que sea más fácil de usar y hemos agregado nuevos atajos para facilitar la navegación entre las diferentes secciones de la aplicación.
+                <b>Mejoras en la funcionalidad de la Aplicación: </b>
+                Hemos integrado una función de sockets para ofrecer eventos en tiempo real, mejorando así la interactividad y la respuesta en tiempo real de la aplicación. Esta nueva característica permite una comunicación más fluida y actualizaciones instantáneas, facilitando la gestión y el seguimiento de los pedidos en tiempo real.
             </p>
             <p>
                 <b>Corrección de errores y mejoras en el rendimiento: </b>
                 Hemos solucionado varios errores menores y realizado mejoras en el rendimiento para garantizar una experiencia de usuario más fluida y confiable.
             </p>
-            <p>Te recomendamos actualizar a la versión 1.2.0 para aprovechar estas nuevas características y mejoras. Si tienes alguna pregunta o necesitas ayuda con la actualización, no dudes en ponerte en contacto con nuestro equipo de soporte.</p>
-            <p>¡Gracias por usar OrderSync Pro y esperamos que disfrutes de las mejoras en esta última versión!</p>
+            <p>Te recomendamos actualizar a la versión 1.2.1 para aprovechar estas nuevas características y mejoras. Si tienes alguna pregunta o necesitas ayuda con la actualización, no dudes en ponerte en contacto con nuestro equipo de soporte.</p>
+            <p>¡Gracias por usar Osync Pro y esperamos que disfrutes de las mejoras en esta última versión!</p>
             <hr />
             <h2>
-                <b>Guía de Usuario: OrderSync Pro - Servicio Sencillo</b>
+                <b>Guía de Usuario: Osync Pro - Servicio Sencillo</b>
             </h2>
             <h2>Introducción:</h2>
-            <p>OrderSync Pro es una aplicación móvil diseñada para mejorar la gestión interna de pedidos en restaurantes, agilizando el proceso y mejorando la productividad. Esta guía le proporcionará una descripción general del flujo del usuario y las funcionalidades clave de la aplicación.</p>
+            <p>Osync Pro es una aplicación móvil diseñada para mejorar la gestión interna de pedidos en restaurantes, agilizando el proceso y mejorando la productividad. Esta guía le proporcionará una descripción general del flujo del usuario y las funcionalidades clave de la aplicación.</p>
             <h2>1. Inicio de sesión y configuración inicial:</h2>
             <ul>
                 <li>Ingrese sus credenciales de usuario proporcionadas por el administrador del restaurante.</li>
@@ -59,7 +59,7 @@ function OrderSyncPro() {
                 <li>Cuando termine su turno, haga clic en el botón  Cerrar sesión  en la esquina superior derecha de la aplicación.</li>
                 <li>La información del turno se guardará automáticamente en el sistema para futuras consultas y análisis.</li>
             </ul>
-            <p>Esta guía es una descripción general de las principales funcionalidades de OrderSync Pro con el Servicio Sencillo. Los usuarios pueden explorar la aplicación en profundidad para familiarizarse con sus características y aprovechar al máximo las herramientas disponibles.</p>
+            <p>Esta guía es una descripción general de las principales funcionalidades de Osync Pro con el Servicio Sencillo. Los usuarios pueden explorar la aplicación en profundidad para familiarizarse con sus características y aprovechar al máximo las herramientas disponibles.</p>
         </div>
     );
 }

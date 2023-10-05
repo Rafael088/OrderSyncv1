@@ -7,7 +7,7 @@ function CardHeader() {
                 <Image src="/OrderSyncProIcon.png" alt="OrderSync" width={200} height={200}/>
             </div>
             <div className="cardHeader-body">
-                <b>OrderSync Pro</b>
+                <b>Osync Pro</b>
                 <p>Sincroniza tus sabores y eleva tu servicios</p>
             </div>
         </div>

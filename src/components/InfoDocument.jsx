@@ -9,13 +9,13 @@ function InfoDocument() {
         <div className="document-body">
             <div className="body-left">
                 <button  className={position === 0 ? 'btn on': 'btn'} onClick={() => setPosition(0)}>
-                    OrderSync Pro
+                    Osync Pro
                 </button>
                 <button  className={position === 1 ? 'btn on': 'btn'} onClick={() => setPosition(1)}>
-                    OrderSync v2
+                    Osync v2
                 </button >
                 <button  className={position === 2 ? 'btn on': 'btn'} onClick={() => setPosition(2)}>
-                    OrderSync Cli
+                    Osync Cli
                 </button>
             </div>
             <div className="body-content">
