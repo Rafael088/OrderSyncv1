@@ -20,6 +20,7 @@ function Footer() {
                 <p>Colombia - Manizales, Caldas</p>
             </div>
             <p>Osync es marca registrada con todos los derechos reservados 2023.</p>
+            <p>Desarrollado por <a href="https://digitalempower.vercel.app/" target='_black'><b>Digital Empower GEN</b></a></p>
         </div>
      );
 }
