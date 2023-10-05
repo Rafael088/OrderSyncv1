@@ -5,7 +5,7 @@ import Providers from './providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'OSync',
+  title: 'Osync',
   description: 'Sincroniza tus sabores y eleva tu servicios',
 }
 
