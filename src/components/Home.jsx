@@ -44,8 +44,8 @@ function Home() {
             </div>
             <div className="body-service">
                 <CardService title="Osync Sencillo" name="Perfecto para empresas pequeñas" price="Gatris" priceOri="Gatris" array={oneService}/>
-                <CardService title="Osync Premiun" name="Ideal para personalizar tu software" price={"59.900"} priceOri="79.900"  array={twoService}/>
-                <CardService title="Osync Empresarial" name="El paquete completo para la transformacion" price={"99.900"} priceOri="149.900"  array={threeService}/>
+                <CardService title="Osync Premiun" name="Ideal para personalizar tu software" price={"45.900"} priceOri="79.900"  array={twoService}/>
+                <CardService title="Osync Empresarial" name="El paquete completo para la transformacion" price={"159.900"} priceOri="189.900"  array={threeService}/>
             </div>
             <div className="body-about">
                 <CardAbout/>
