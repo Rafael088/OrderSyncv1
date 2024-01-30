@@ -28,7 +28,7 @@ function TicketsList() {
     }
     useEffect(() => {
         getData()
-    }, [getData])
+    })
     
     async function updateElement(info) {
             selectUpdate.pointHistory = 1 + selectUpdate.pointHistory
