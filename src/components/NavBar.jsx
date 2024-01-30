@@ -16,6 +16,7 @@ function NabVar() {
                 <Link href="/" className="btn">Inicio</Link>
                 <Link href="/servicios" className="btn">Servicios</Link>
                 <Link href="/documentacion" className="btn">Documentación</Link>
+                <Link href="/contacto" className="btn">Aplicación</Link>
                 <Link href="/contacto" className="btn">Contacto</Link>
             </div>
             <div className="contNavBar-footer">

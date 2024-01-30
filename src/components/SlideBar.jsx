@@ -7,31 +7,35 @@ import { AiOutlineNotification, AiOutlineCreditCard, AiOutlineBook, AiOutlineSol
 import React, { useState } from 'react';
 function SlideBar() {
     const [onClose, setOnClose] = useState(false);
-    return ( 
+    return (
         <div className={onClose ? "sliderbar-close" : "slidebar"}>
             <div className="slidebar-header">
                 <Image src="/OrderSyncProIcon.png" alt="OrderSync Pro" className="img" width={200} height={200} />
-                <p>OrderSync Pro <b>Beta</b></p>
+                <p>Osync <b>Beta</b></p>
             </div>
             <div className="slidebar-body">
                 <Link href="/ordersyncPro" className="btn">
-                    <AiOutlineNotification className="icon"/>
+                    <AiOutlineNotification className="icon" />
                     <p>Ordenes</p>
-                    </Link>
+                </Link>
                 <Link href="/ordersyncPro/caja" className="btn">
-                    <AiOutlineCreditCard className="icon"/>
+                    <AiOutlineCreditCard className="icon" />
                     <p>Caja</p>
-                    </Link>
+                </Link>
                 <Link href="/ordersyncPro/estadisticas" className="btn">
-                    <AiOutlineBook className="icon"/>
+                    <AiOutlineBook className="icon" />
                     <p>Estadisticas</p>
-                    </Link>
+                </Link>
+                <Link href="/ordersyncPro/tickets" className="btn">
+                    <AiOutlineBook className="icon" />
+                    <p>Tickets</p>
+                </Link>
             </div>
             <div className="slidebar-footer">
-                
+
             </div>
         </div>
-     );
+    );
 }
 
 export default SlideBar;
