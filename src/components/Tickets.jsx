@@ -11,7 +11,6 @@ function TicketsList() {
     const [modalCreate, setModalCreate] = useState(false);
     const [selectUpdate, setSelectUpdate] = useState(false);
     const { register, handleSubmit } = useForm();
-    const [fails, setFails] = useState("");
     const { auth } = useSelector((state) => state.auth)
     async function getData() {
 
@@ -67,7 +66,7 @@ function TicketsList() {
                             .filter(element => element.pointHistory >= parseInt(element.value) - 5)
                             .filter(element => element.pointHistory !== parseInt(element.value))
                             .map(element => (
-                                <div className='list-element'>
+                                <div className='list-element' key={element._id}>
                                     <p>{element.nameCase}</p>
                                     <p>{element.phone}</p>
                                     <b>Puntos: {element.pointHistory} - {element.value}</b>
@@ -105,7 +104,7 @@ function TicketsList() {
                             data
                             .filter(element => element.pointHistory !== parseInt(element.value))
                             .map(element => (
-                                <div className='list-element' onClick={() => setSelectUpdate(element)}>
+                                <div className='list-element' onClick={() => setSelectUpdate(element)} key={element._id}>
                                     <p>{element.nameCase}</p>
                                     <p>{element.phone}</p>
                                     <b>Puntos: {element.pointHistory}</b>
