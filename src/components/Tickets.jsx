@@ -96,24 +96,30 @@ function TicketsList() {
                 }
 
             </div>
-            <div className="list-bot">
-                <h2>Lista de Tickets Activos</h2>
+            <d className="list-bot">
+                <h2>Lista de Tickets Activos { data.length > 0 ? data.length: ''}</h2>
+                <ul>
                 {
                     data.length > 0 ? <>
                         {
                             data
                             .filter(element => element.pointHistory !== parseInt(element.value))
-                            .map(element => (
-                                <div className='list-element' onClick={() => setSelectUpdate(element)} key={element._id}>
+                            .map((element, index) => (
+                                <li key={element._id}>
+                                <div className='list-element' onClick={() => setSelectUpdate(element)}>
+                                    {index + 1}
                                     <p>{element.nameCase}</p>
                                     <p>{element.phone}</p>
                                     <b>Puntos: {element.pointHistory}</b>
                                 </div>
+                                </li>
                             ))
                         }
                     </>:<></>
                 }
-            </div>
+                </ul>
+                
+            </d>
             
         </div>
      );

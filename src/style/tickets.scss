@@ -97,7 +97,7 @@ $base-color-3: #fafafa;
         }
     }
     .list-mid{
-        width: 33%;
+        width: 30%;
         height: 100%;
         @include flexRS(flex-start, column);
         .select{
@@ -134,7 +134,7 @@ $base-color-3: #fafafa;
         }
     }
     .list-bot{
-        width: 33%;
+        width: 36%;
         height: 100%;
         overflow: auto;
         .list-element{
@@ -142,10 +142,14 @@ $base-color-3: #fafafa;
             height: auto;
             padding: 10px;
             margin: 5px;
-            @include flexRS(space-around, row);
+            @include flexRS(flex-start, row);
             cursor: pointer;
             position: relative;
             @include animBase();
+            font-size: 14px;
+            p{
+                margin: 0px 5px;
+            }
         }
         h2{
             font-size: 20px;
