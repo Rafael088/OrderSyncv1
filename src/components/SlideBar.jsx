@@ -3,7 +3,7 @@ import '../style/slideBar.scss'
 
 import Link from "next/link";
 import Image from 'next/image'
-import { AiOutlineNotification, AiOutlineCreditCard, AiOutlineBook, AiOutlineSolution } from "react-icons/ai";
+import { AiOutlineNotification, AiOutlineCreditCard, AiOutlineBook, AiOutlineCalendar  } from "react-icons/ai";
 import React, { useState } from 'react';
 function SlideBar() {
     const [onClose, setOnClose] = useState(false);
@@ -27,7 +27,7 @@ function SlideBar() {
                     <p>Estadisticas</p>
                 </Link>
                 <Link href="/ordersyncPro/tickets" className="btn">
-                    <AiOutlineBook className="icon" />
+                    <AiOutlineCalendar  className="icon" />
                     <p>Tickets</p>
                 </Link>
             </div>
