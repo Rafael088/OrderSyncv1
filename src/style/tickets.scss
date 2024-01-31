@@ -80,6 +80,12 @@ $base-color-3: #fafafa;
         width: 33%;
         height: 100%;
         overflow: auto;
+        .registerToDay{
+            width: 100%;
+            height: 100px;
+            margin-top: 20px;
+            @include flexRS(space-around, column);
+        }
         .list-element{
             width: 80%;
             height: auto;
@@ -97,8 +103,9 @@ $base-color-3: #fafafa;
         }
     }
     .list-mid{
-        width: 30%;
+        width: auto;
         height: 100%;
+        padding: 5px;
         @include flexRS(flex-start, column);
         .select{
             width: 100%;
@@ -115,7 +122,7 @@ $base-color-3: #fafafa;
             }
         }
         .btn{
-            width: 60%;
+            width: 150px;
             height: 40px;
             border: none;
             margin: 10px;
@@ -134,9 +141,11 @@ $base-color-3: #fafafa;
         }
     }
     .list-bot{
-        width: 36%;
+        width: 45%;
         height: 100%;
         overflow: auto;
+        
+
         .list-element{
             width: 80%;
             height: auto;
@@ -159,4 +168,24 @@ $base-color-3: #fafafa;
             margin-bottom: 20px;
         }
     }
+}
+/* Selector para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Track (el área en la que se mueve la barra de desplazamiento) */
+::-webkit-scrollbar-track {
+    background: transparent; /* Color de fondo del track */
+}
+
+/* Handle (la parte de la barra de desplazamiento que se puede arrastrar) */
+::-webkit-scrollbar-thumb {
+    background: #ababab; /* Color de fondo del handle */
+    border-radius: 6px; /* Radio de borde del handle */
+}
+
+/* Cambiar el color del handle cuando se pasa el mouse sobre él */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

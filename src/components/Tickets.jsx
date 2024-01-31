@@ -51,6 +51,29 @@ function TicketsList() {
             getData()
     }
 
+    // Filtrar tickets vendidos hoy
+    const ticketsVendidosHoy = data.filter(element => {
+        // Obtener fecha actual en formato yyyy-mm-dd
+        const fechaActual = new Date().toISOString().split('T')[0];
+
+        // Verificar si alguna de las fechas en listDate es igual a la fecha actual
+        return element.listDate.some(date => date.startsWith(fechaActual));
+    });
+
+    const calcularTicketsVendidosHoy = () => {
+        const fechaActual = new Date().toISOString().split('T')[0];
+
+        // Filtrar tickets vendidos hoy
+        const ticketsVendidosHoy = data.filter(element =>
+            element.listDate.some(date => date.startsWith(fechaActual))
+        );
+
+        // Calcular suma de pointHistory para los tickets vendidos hoy
+        const sumaTicketsVendidosHoy = ticketsVendidosHoy.reduce((total, element) =>
+            total + element.pointHistory, 0);
+
+        return sumaTicketsVendidosHoy;
+    };
     return ( 
         <div className="ticketslist">
             {
@@ -69,12 +92,17 @@ function TicketsList() {
                                 <div className='list-element' key={element._id}>
                                     <p>{element.nameCase}</p>
                                     <p>{element.phone}</p>
-                                    <b>Puntos: {element.pointHistory} - {element.value}</b>
+                                    <b>Cantidad: {element.pointHistory} - {element.value}</b>
                                 </div>
                             ))
                         }
                     </>:<></>
                 }
+
+               <div className='registerToDay'>
+                <h2>Registros de Hoy</h2>
+               <b>{calcularTicketsVendidosHoy()}</b>
+               </div>
             </div>
             <div className="list-mid">
                 <button className='btn create' onClick={() => setModalCreate(true)}>Crear Nuevo</button>
@@ -110,7 +138,7 @@ function TicketsList() {
                                     {index + 1}
                                     <p>{element.nameCase}</p>
                                     <p>{element.phone}</p>
-                                    <b>Puntos: {element.pointHistory}</b>
+                                    <b>Cantidad: {element.pointHistory} - {element.value}</b>
                                 </div>
                                 </li>
                             ))
