@@ -62,18 +62,28 @@ function TicketsList() {
 
     const calcularTicketsVendidosHoy = () => {
         const fechaActual = new Date().toISOString().split('T')[0];
-
+    
         // Filtrar tickets vendidos hoy
         const ticketsVendidosHoy = data.filter(element =>
             element.listDate.some(date => date.startsWith(fechaActual))
         );
-
-        // Calcular suma de pointHistory para los tickets vendidos hoy
-        const sumaTicketsVendidosHoy = ticketsVendidosHoy.reduce((total, element) =>
-            total + element.pointHistory, 0);
-
+    
+        // Contar la cantidad de tickets vendidos hoy para cada fecha
+        const ticketsPorFecha = ticketsVendidosHoy.reduce((contador, element) => {
+            element.listDate.forEach(date => {
+                if (date.startsWith(fechaActual)) {
+                    contador[date] = (contador[date] || 0) + 1;
+                }
+            });
+            return contador;
+        }, {});
+    
+        // Calcular la suma total de tickets vendidos hoy
+        const sumaTicketsVendidosHoy = Object.values(ticketsPorFecha).reduce((total, count) => total + count, 0);
+    
         return sumaTicketsVendidosHoy;
     };
+    
     return ( 
         <div className="ticketslist">
             {
