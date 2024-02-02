@@ -40,6 +40,7 @@ $base-color-3: #fafafa;
         top: 20%;
         background-color: #5e5e5e;
         border-radius: 5px;
+        z-index: 10;
         position: absolute;
         @include flexRS(space-around, column);
         .modal-body{
