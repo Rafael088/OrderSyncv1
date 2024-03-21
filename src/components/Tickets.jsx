@@ -5,11 +5,13 @@ import { useSelector } from "react-redux"
 import ModalCreateTickets from './modals/ModalCreateTickets';
 
 import { useForm } from "react-hook-form"
+import ModalHistoryTickets from './modals/ModalHistory';
 
 function TicketsList() {
     const [data, setData] = useState([]);
     const [modalCreate, setModalCreate] = useState(false);
     const [selectUpdate, setSelectUpdate] = useState(false);
+    const [modalHistory, setModalHistory] = useState(false);
     const { register, handleSubmit } = useForm();
     const { auth } = useSelector((state) => state.auth)
     async function getData() {
@@ -116,6 +118,10 @@ function TicketsList() {
                 modalCreate ?
                     <ModalCreateTickets setModalCreate={setModalCreate} getData={getData} /> : <></>
             }
+            {
+                modalHistory ?
+                    <ModalHistoryTickets setModalHistory={setModalHistory} selectUpdate={selectUpdate} setSelectUpdate={setSelectUpdate} /> : <></>
+            }
             <div className="list-top">
                 <h2>Proximos a Vencer</h2>
                 {
@@ -162,12 +168,15 @@ function TicketsList() {
                                     Agregar Puntos
                                 </button>
                             </form>
+                            <div>
+                                <button type="button" onClick={() => setModalHistory(true)}>Ver Historico</button>
+                            </div>
                         </> : <></>
                 }
 
             </div>
             <d className="list-bot">
-                <h2>Lista de Tickets Activos {data.length > 0 ? data.length : ''}</h2>
+                <h2>Lista de Tickets {data.length > 0 ? data.length : ''} en Total</h2>
                 <ul>
                     {
                         data.length > 0 ? <>

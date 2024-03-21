@@ -52,6 +52,13 @@ $base-color-3: #fafafa;
                 padding: 10px;
             }
         }
+        .history{
+            overflow: auto;
+            p{
+                font-size: 17px;
+                color: white;
+            }
+        }
         .modal-btns{
             width: 100%;
 
